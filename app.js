@@ -22,7 +22,7 @@ var extend = require('extend');
 var AuthorizationV1 = require('watson-developer-cloud/authorization/v1');
 var youtube = require('./youtube');
 var cloudant = {
-		 		 url : "https://eb3a04c9-89cb-4a62-9f20-fcc94e6c1019-bluemix:ca37a9c21daf17bb507acc46c1c3ed1ad25fbe9fa0e7ee788d10371c714c3a7c@eb3a04c9-89cb-4a62-9f20-fcc94e6c1019-bluemix.cloudant.com" 		 		 
+		 		 url : "https://9b672f5d-a8b9-488d-aed4-9af82287e9c7-bluemix:d13011c1de48d5009e355d50b1931c5612950b2078f1af2e80f8405fb5f1460f@9b672f5d-a8b9-488d-aed4-9af82287e9c7-bluemix.cloudant.com" 		 		 
 };
 const https = require('https');
 var app = express();
