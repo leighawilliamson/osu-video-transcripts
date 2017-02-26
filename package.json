@@ -46,13 +46,14 @@
     "watchify": "^3.6.1",
     "watson-developer-cloud": "^2.8.1",
     "watson-speech": "^0.7.0",
-    "nano" : "*"
+    "nano": "*"
   },
   "engines": {
     "node": "^6.9.1",
     "npm": "3.10.9"
   },
   "devDependencies": {
-    "eslint": "^3.9.1"
+    "eslint": "^3.9.1",
+    "node-gyp": "^3.5.0"
   }
 }
