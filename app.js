@@ -125,7 +125,7 @@ app.get('/view_transcript', function(request, response) {
     queryUrl = queryUrl + "?key=" + request.query.title;
     console.log("title: ", request.query.title);
   }
-  //console.log('url: ', queryUrl);
+  console.log('queryUrl: ', queryUrl);
   
   var callback=function(data)
     {

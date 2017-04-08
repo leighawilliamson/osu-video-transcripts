@@ -8,14 +8,27 @@ function createTableRow(sentence) {
   return '<tr><td contenteditable="false"><button type="submit" disabled>Update</button></td>  <td style="padding:4px" contenteditable="true">' + sentence + '</td></tr>';
 }
 
+
 /**
  * Populate the table by retrieving sentences from the DB. 
  * Called when the DOM is fully loaded.
  */
 var sentences = [];
 function populateTable() {	
+  var viewURL = "/view_transcript";
+
+  var title = localStorage.getItem('video_title');
+  console.log("populateTable title: ", title);
+  if (title){
+    viewURL = viewURL +"?title=" + title;
+    $("#showTitle").text("Video Title: " + title);
+  };
+  console.log("viewURL = ", viewURL);
+  
+
   var table = $("#transcript_table tr");
-  $.get("/view_transcript", function (data) {
+ // $.get("/view_transcript", function (data) {
+  $.get(viewURL, function (data) {
     //  console.log('data: ', data);
     sentences = JSON.parse(data);
     //  console.log('sentences: ', sentences);
@@ -28,3 +41,7 @@ function populateTable() {
 }
 
 $(populateTable);
+
+$('#download_btn').on('click', function() {
+    console.log('download button clicked');
+});

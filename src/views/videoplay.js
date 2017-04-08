@@ -97,6 +97,7 @@ function startVideoSpeechStream() {
       var sentence = result.alternatives[useIndex].transcript;
       //console.log('recommended to use transcript index: ', useIndex);
       console.log('video title: ', video_title);
+      localStorage.setItem('video_title', video_title);
       console.log('recommended sentence: ', sentence);
       console.log('sentence number: ', result.index);
      
@@ -115,7 +116,7 @@ function startVideoSpeechStream() {
         timestamp: result.alternatives[0].timestamps[0][1] + videoProps.currentTime
       })
       
-      concepts.updateTranscript(videoProps.transcripts);
+      //concepts.updateTranscript(videoProps.transcripts);
 
     }
     if (videoProps.howitworks == null) {
